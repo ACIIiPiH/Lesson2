@@ -10,6 +10,7 @@
 
 %Оптимальный вариант исполнения
 
-reverse([]) -> [];
-reverse([H|T]) ->[H|reverse(T)].
+reverse(List) -> reverse(List, []).
+reverse ([], Rev_list) -> Rev_list;
+reverse([H|T], Rev_list) ->reverse(T, [H|Rev_list]).
 
